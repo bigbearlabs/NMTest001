@@ -34,23 +34,15 @@
         // only handle clicks on windows
         if ([[[element topLevelElement] role] isEqualToString:(NSString *)kAXWindowRole])
         {
-            const NSEventType type=[event type];
-            if (type==NSLeftMouseDown)
-            {          
-                const pid_t this_pid=element.pid;       
-                if (this_pid!=prev_pid)
-                {
-                    [windowControllers makeObjectsPerformSelector:@selector(handleNewElement:) withObject:element];
-                    prev_pid=this_pid;
-                }
-            }
-            else if (type==NSLeftMouseUp)
-            {
-                [windowControllers makeObjectsPerformSelector:@selector(handleMouseUpInWindow)];
-            }
+            [windowControllers makeObjectsPerformSelector:@selector(handleNewElement:) withObject:element];
         }
     }];
 
+}
+
+- (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)sender
+{   
+    return YES;
 }
 
 @end

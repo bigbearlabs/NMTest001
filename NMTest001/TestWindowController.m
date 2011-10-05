@@ -11,7 +11,7 @@
 
 @implementation TestWindowController
 
-@synthesize appDisplayName, menuItemTitle, foundMenuItemTitle, foundMenuItemState, timerString;
+@synthesize appDisplayName, menuItemTitle, foundMenuItemTitle, foundMenuItemState;
 
 
 - (id)initWithWindow:(NSWindow *)window
@@ -48,32 +48,15 @@
 {
     NSString *titleString=[NSString stringWithFormat:@"no match for '%@'", self.menuItemTitle];
     NSString *stateString=@"unknown";
-    NSString *newTimerString=self.timerString;
-    
-    const BOOL currentState=[menuItem enabled];
-    if (currentState!=lastState) {
-        // state changed
-        timing=NO;
-    }
-    lastState=[menuItem enabled];
     
     if (menuItem) {
         titleString=[menuItem title];
-        stateString=currentState?@"Enabled":@"Disabled";
-    }
-    else {
-        newTimerString=@"";
-    }
-    
-    if(timing) {
-        NSTimeInterval interval=-[lastMouseUpDate timeIntervalSinceNow];    
-        newTimerString=[NSString stringWithFormat:@"%0.2fs", interval];
+        stateString=[menuItem enabled]?@"+++ Enabled +++":@"--- Disabled ---";
     }
     
     // update the UI
     self.foundMenuItemTitle=titleString;
     self.foundMenuItemState=stateString;
-    self.timerString=newTimerString;
 }
 
 - (void)handleNewElement:(NMUIElement *)element
@@ -90,12 +73,6 @@
     [self timerRoutine];    
 }
 
-- (void)handleMouseUpInWindow
-{
-    // start timing
-    lastMouseUpDate=[NSDate date];
-    timing=!!menuItem;
-}
 
 - (void)windowDidLoad
 {
@@ -103,9 +80,7 @@
     [self.window setLevel:NSFloatingWindowLevel];
     self.menuItemTitle=@"Copy";
     self.appDisplayName=@"(click in an app window)";
-    
-    lastState=NO;
-    timing=NO;
+
     timer=[NSTimer scheduledTimerWithTimeInterval:0.025 target:self selector:@selector(timerRoutine) userInfo:nil repeats:YES];
 }
 

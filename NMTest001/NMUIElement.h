@@ -7,7 +7,6 @@
 //
 
 #import <Cocoa/Cocoa.h>
-@class NMPoint;
 
 #define NM_UIELEMENT_MAX_PATH_DEPTH 10
 
@@ -52,8 +51,7 @@
 @property (readonly) NSNumber *insertionPointLineNumber;
 @property (readonly) NSNumber *numberOfCharacters;
 
-+ (AXError)lastError;
-+ (NMUIElement *)elementAtLocation:(NMPoint *)point
++ (NMUIElement *)elementAtLocation:(NSPoint)point
 						   timeout:(NSTimeInterval)timeout;
 
 - (NMUIElement *)childAtIndex:(NSUInteger)index;

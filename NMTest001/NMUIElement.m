@@ -6,11 +6,9 @@
 //  Copyright 2010 Nicholas Moore. All rights reserved.
 //
 
-#import "NMPoint.h"
 #import "NMUIElement.h"
-#import "NMUIElementHelper.h"
 
-static NMUIElementHelper *_helper;
+static AXUIElementRef _systemWide = NULL;
 
 @implementation NMUIElement
 @synthesize elementRef;
@@ -19,19 +17,18 @@ static NMUIElementHelper *_helper;
 {
 	if (self == [NMUIElement class]) // standard check to prevent multiple runs
     {
-		_helper=[[NMUIElementHelper alloc] init];
+        if (!_systemWide) {
+            _systemWide = AXUIElementCreateSystemWide();
+        }
     }
 }
 
-+ (NMUIElement *)elementAtLocation:(NMPoint *)point
++ (NMUIElement *)elementAtLocation:(NSPoint)point
 						   timeout:(NSTimeInterval)timeout
 {
-	return [[NMUIElement alloc] initWithElement:[_helper elementAtUnflippedLocation:[point nsPoint] timeout:timeout]];
-}
-
-+ (AXError)lastError
-{
-	return [_helper lastError];
+	AXUIElementRef element=NULL;
+	AXUIElementCopyElementAtPosition (_systemWide, point.x, point.y, &element);
+	return [[NMUIElement alloc] initWithElement:element];
 }
 
 - (id)initWithElement:(AXUIElementRef)element

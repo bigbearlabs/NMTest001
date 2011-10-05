@@ -13,6 +13,16 @@
 		013D8CBD143C85A100AC2A43 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 013D8CBB143C85A100AC2A43 /* Credits.rtf */; };
 		013D8CC0143C85A100AC2A43 /* NMTest001AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 013D8CBF143C85A100AC2A43 /* NMTest001AppDelegate.m */; };
 		013D8CC3143C85A200AC2A43 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 013D8CC1143C85A200AC2A43 /* MainMenu.xib */; };
+		013D8CCF143C8B1F00AC2A43 /* NMCachedMenuItemFinder.m in Sources */ = {isa = PBXBuildFile; fileRef = 013D8CCA143C8B1F00AC2A43 /* NMCachedMenuItemFinder.m */; };
+		013D8CD0143C8B1F00AC2A43 /* NMMenuItemFinder.m in Sources */ = {isa = PBXBuildFile; fileRef = 013D8CCC143C8B1F00AC2A43 /* NMMenuItemFinder.m */; };
+		013D8CD1143C8B1F00AC2A43 /* NMMenuItemHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 013D8CCE143C8B1F00AC2A43 /* NMMenuItemHelper.m */; };
+		013D8CD4143C8B2E00AC2A43 /* NMFlagCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 013D8CD3143C8B2E00AC2A43 /* NMFlagCache.m */; };
+		013D8CD7143C8B4200AC2A43 /* NMAppUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 013D8CD6143C8B4200AC2A43 /* NMAppUtils.m */; };
+		013D8CDC143C8B5100AC2A43 /* NMUIElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 013D8CD9143C8B5100AC2A43 /* NMUIElement.m */; };
+		013D8CDD143C8B5100AC2A43 /* NMUIElementHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 013D8CDB143C8B5100AC2A43 /* NMUIElementHelper.m */; };
+		013D8CE0143C8B6600AC2A43 /* NMPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 013D8CDF143C8B6600AC2A43 /* NMPoint.m */; };
+		013D8CE3143C8B7A00AC2A43 /* NMMouseUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 013D8CE2143C8B7A00AC2A43 /* NMMouseUtils.m */; };
+		013D8CE6143C8B9200AC2A43 /* NMGeometryUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 013D8CE5143C8B9200AC2A43 /* NMGeometryUtils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,14 +31,34 @@
 		013D8CAF143C85A100AC2A43 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		013D8CB0143C85A100AC2A43 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		013D8CB1143C85A100AC2A43 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		013D8CB4143C85A100AC2A43 /* NMTest001-Info.plist */ = {isa = PBXFileReference; path = "NMTest001-Info.plist"; sourceTree = "<group>"; };
+		013D8CB4143C85A100AC2A43 /* NMTest001-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NMTest001-Info.plist"; sourceTree = "<group>"; };
 		013D8CB6143C85A100AC2A43 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		013D8CB8143C85A100AC2A43 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		013D8CBA143C85A100AC2A43 /* NMTest001-Prefix.pch */ = {isa = PBXFileReference; path = "NMTest001-Prefix.pch"; sourceTree = "<group>"; };
+		013D8CBA143C85A100AC2A43 /* NMTest001-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NMTest001-Prefix.pch"; sourceTree = "<group>"; };
 		013D8CBC143C85A100AC2A43 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		013D8CBE143C85A100AC2A43 /* NMTest001AppDelegate.h */ = {isa = PBXFileReference; path = NMTest001AppDelegate.h; sourceTree = "<group>"; };
+		013D8CBE143C85A100AC2A43 /* NMTest001AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NMTest001AppDelegate.h; sourceTree = "<group>"; };
 		013D8CBF143C85A100AC2A43 /* NMTest001AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NMTest001AppDelegate.m; sourceTree = "<group>"; };
 		013D8CC2143C85A200AC2A43 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		013D8CC9143C8B1F00AC2A43 /* NMCachedMenuItemFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMCachedMenuItemFinder.h; sourceTree = "<group>"; };
+		013D8CCA143C8B1F00AC2A43 /* NMCachedMenuItemFinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMCachedMenuItemFinder.m; sourceTree = "<group>"; };
+		013D8CCB143C8B1F00AC2A43 /* NMMenuItemFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMMenuItemFinder.h; sourceTree = "<group>"; };
+		013D8CCC143C8B1F00AC2A43 /* NMMenuItemFinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMMenuItemFinder.m; sourceTree = "<group>"; };
+		013D8CCD143C8B1F00AC2A43 /* NMMenuItemHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMMenuItemHelper.h; sourceTree = "<group>"; };
+		013D8CCE143C8B1F00AC2A43 /* NMMenuItemHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMMenuItemHelper.m; sourceTree = "<group>"; };
+		013D8CD2143C8B2E00AC2A43 /* NMFlagCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMFlagCache.h; sourceTree = "<group>"; };
+		013D8CD3143C8B2E00AC2A43 /* NMFlagCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMFlagCache.m; sourceTree = "<group>"; };
+		013D8CD5143C8B4200AC2A43 /* NMAppUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMAppUtils.h; sourceTree = "<group>"; };
+		013D8CD6143C8B4200AC2A43 /* NMAppUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMAppUtils.m; sourceTree = "<group>"; };
+		013D8CD8143C8B5100AC2A43 /* NMUIElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMUIElement.h; sourceTree = "<group>"; };
+		013D8CD9143C8B5100AC2A43 /* NMUIElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMUIElement.m; sourceTree = "<group>"; };
+		013D8CDA143C8B5100AC2A43 /* NMUIElementHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMUIElementHelper.h; sourceTree = "<group>"; };
+		013D8CDB143C8B5100AC2A43 /* NMUIElementHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMUIElementHelper.m; sourceTree = "<group>"; };
+		013D8CDE143C8B6600AC2A43 /* NMPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMPoint.h; sourceTree = "<group>"; };
+		013D8CDF143C8B6600AC2A43 /* NMPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMPoint.m; sourceTree = "<group>"; };
+		013D8CE1143C8B7A00AC2A43 /* NMMouseUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMMouseUtils.h; sourceTree = "<group>"; };
+		013D8CE2143C8B7A00AC2A43 /* NMMouseUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMMouseUtils.m; sourceTree = "<group>"; };
+		013D8CE4143C8B9200AC2A43 /* NMGeometryUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMGeometryUtils.h; sourceTree = "<group>"; };
+		013D8CE5143C8B9200AC2A43 /* NMGeometryUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMGeometryUtils.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +112,26 @@
 		013D8CB2143C85A100AC2A43 /* NMTest001 */ = {
 			isa = PBXGroup;
 			children = (
+				013D8CE4143C8B9200AC2A43 /* NMGeometryUtils.h */,
+				013D8CE5143C8B9200AC2A43 /* NMGeometryUtils.m */,
+				013D8CDE143C8B6600AC2A43 /* NMPoint.h */,
+				013D8CDF143C8B6600AC2A43 /* NMPoint.m */,
+				013D8CE1143C8B7A00AC2A43 /* NMMouseUtils.h */,
+				013D8CE2143C8B7A00AC2A43 /* NMMouseUtils.m */,
+				013D8CD8143C8B5100AC2A43 /* NMUIElement.h */,
+				013D8CD9143C8B5100AC2A43 /* NMUIElement.m */,
+				013D8CDA143C8B5100AC2A43 /* NMUIElementHelper.h */,
+				013D8CDB143C8B5100AC2A43 /* NMUIElementHelper.m */,
+				013D8CD5143C8B4200AC2A43 /* NMAppUtils.h */,
+				013D8CD6143C8B4200AC2A43 /* NMAppUtils.m */,
+				013D8CD2143C8B2E00AC2A43 /* NMFlagCache.h */,
+				013D8CD3143C8B2E00AC2A43 /* NMFlagCache.m */,
+				013D8CC9143C8B1F00AC2A43 /* NMCachedMenuItemFinder.h */,
+				013D8CCA143C8B1F00AC2A43 /* NMCachedMenuItemFinder.m */,
+				013D8CCB143C8B1F00AC2A43 /* NMMenuItemFinder.h */,
+				013D8CCC143C8B1F00AC2A43 /* NMMenuItemFinder.m */,
+				013D8CCD143C8B1F00AC2A43 /* NMMenuItemHelper.h */,
+				013D8CCE143C8B1F00AC2A43 /* NMMenuItemHelper.m */,
 				013D8CBE143C85A100AC2A43 /* NMTest001AppDelegate.h */,
 				013D8CBF143C85A100AC2A43 /* NMTest001AppDelegate.m */,
 				013D8CC1143C85A200AC2A43 /* MainMenu.xib */,
@@ -164,6 +214,16 @@
 			files = (
 				013D8CB9143C85A100AC2A43 /* main.m in Sources */,
 				013D8CC0143C85A100AC2A43 /* NMTest001AppDelegate.m in Sources */,
+				013D8CCF143C8B1F00AC2A43 /* NMCachedMenuItemFinder.m in Sources */,
+				013D8CD0143C8B1F00AC2A43 /* NMMenuItemFinder.m in Sources */,
+				013D8CD1143C8B1F00AC2A43 /* NMMenuItemHelper.m in Sources */,
+				013D8CD4143C8B2E00AC2A43 /* NMFlagCache.m in Sources */,
+				013D8CD7143C8B4200AC2A43 /* NMAppUtils.m in Sources */,
+				013D8CDC143C8B5100AC2A43 /* NMUIElement.m in Sources */,
+				013D8CDD143C8B5100AC2A43 /* NMUIElementHelper.m in Sources */,
+				013D8CE0143C8B6600AC2A43 /* NMPoint.m in Sources */,
+				013D8CE3143C8B7A00AC2A43 /* NMMouseUtils.m in Sources */,
+				013D8CE6143C8B9200AC2A43 /* NMGeometryUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

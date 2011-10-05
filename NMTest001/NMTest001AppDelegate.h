@@ -7,24 +7,11 @@
 //
 
 #import <Cocoa/Cocoa.h>
-@class NMUIElement;
+#import "TestWindowController.h"
 
 @interface NMTest001AppDelegate : NSObject <NSApplicationDelegate> {
-    NSWindow *window;
-
-    // internals
-    NMUIElement *menuItem;
-    
-    // ui
-    NSString *appDisplayName;
-    NSString *menuItemTitle;
-    NSString *foundMenuItemTitle;
-    NSString *foundMenuItemState;
+    NSMutableArray *windowControllers;
 }
+- (IBAction)createNewWindow:(id)sender;
 
-@property (assign) IBOutlet NSWindow *window;
-@property (assign) NSString *appDisplayName;
-@property (assign) NSString *menuItemTitle;
-@property (assign) NSString *foundMenuItemTitle;
-@property (assign) NSString *foundMenuItemState;
 @end

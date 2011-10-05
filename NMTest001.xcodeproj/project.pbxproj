@@ -15,6 +15,8 @@
 		013D8CC3143C85A200AC2A43 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 013D8CC1143C85A200AC2A43 /* MainMenu.xib */; };
 		013D8CD0143C8B1F00AC2A43 /* NMMenuItemFinder.m in Sources */ = {isa = PBXBuildFile; fileRef = 013D8CCC143C8B1F00AC2A43 /* NMMenuItemFinder.m */; };
 		013D8CDC143C8B5100AC2A43 /* NMUIElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 013D8CD9143C8B5100AC2A43 /* NMUIElement.m */; };
+		013D8CEC143CA34000AC2A43 /* TestWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 013D8CEB143CA34000AC2A43 /* TestWindowController.m */; };
+		013D8CEE143CA41200AC2A43 /* Window.xib in Resources */ = {isa = PBXBuildFile; fileRef = 013D8CED143CA41200AC2A43 /* Window.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,9 @@
 		013D8CCC143C8B1F00AC2A43 /* NMMenuItemFinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMMenuItemFinder.m; sourceTree = "<group>"; };
 		013D8CD8143C8B5100AC2A43 /* NMUIElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NMUIElement.h; sourceTree = "<group>"; };
 		013D8CD9143C8B5100AC2A43 /* NMUIElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NMUIElement.m; sourceTree = "<group>"; };
+		013D8CEA143CA34000AC2A43 /* TestWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestWindowController.h; sourceTree = "<group>"; };
+		013D8CEB143CA34000AC2A43 /* TestWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestWindowController.m; sourceTree = "<group>"; };
+		013D8CED143CA41200AC2A43 /* Window.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Window.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,7 +99,10 @@
 				013D8CCC143C8B1F00AC2A43 /* NMMenuItemFinder.m */,
 				013D8CBE143C85A100AC2A43 /* NMTest001AppDelegate.h */,
 				013D8CBF143C85A100AC2A43 /* NMTest001AppDelegate.m */,
+				013D8CEA143CA34000AC2A43 /* TestWindowController.h */,
+				013D8CEB143CA34000AC2A43 /* TestWindowController.m */,
 				013D8CC1143C85A200AC2A43 /* MainMenu.xib */,
+				013D8CED143CA41200AC2A43 /* Window.xib */,
 				013D8CB3143C85A100AC2A43 /* Supporting Files */,
 			);
 			path = NMTest001;
@@ -162,6 +170,7 @@
 				013D8CB7143C85A100AC2A43 /* InfoPlist.strings in Resources */,
 				013D8CBD143C85A100AC2A43 /* Credits.rtf in Resources */,
 				013D8CC3143C85A200AC2A43 /* MainMenu.xib in Resources */,
+				013D8CEE143CA41200AC2A43 /* Window.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,6 +185,7 @@
 				013D8CC0143C85A100AC2A43 /* NMTest001AppDelegate.m in Sources */,
 				013D8CD0143C8B1F00AC2A43 /* NMMenuItemFinder.m in Sources */,
 				013D8CDC143C8B5100AC2A43 /* NMUIElement.m in Sources */,
+				013D8CEC143CA34000AC2A43 /* TestWindowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

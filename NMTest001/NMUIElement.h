@@ -51,8 +51,7 @@
 @property (readonly) NSNumber *insertionPointLineNumber;
 @property (readonly) NSNumber *numberOfCharacters;
 
-+ (NMUIElement *)elementAtLocation:(NSPoint)point
-						   timeout:(NSTimeInterval)timeout;
++ (NMUIElement *)elementAtLocation:(NSPoint)point;
 
 - (NMUIElement *)childAtIndex:(NSUInteger)index;
 - (id)initWithElement:(AXUIElementRef)element;

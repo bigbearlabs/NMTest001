@@ -9,8 +9,9 @@
 #import <Cocoa/Cocoa.h>
 #import "TestWindowController.h"
 
-@interface NMTest001AppDelegate : NSObject <NSApplicationDelegate> {
+@interface TestAppDelegate : NSObject <NSApplicationDelegate> {
     NSMutableArray *windowControllers;
+    pid_t prev_pid;
 }
 - (IBAction)createNewWindow:(id)sender;
 

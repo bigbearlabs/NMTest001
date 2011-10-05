@@ -24,7 +24,6 @@ static AXUIElementRef _systemWide = NULL;
 }
 
 + (NMUIElement *)elementAtLocation:(NSPoint)point
-						   timeout:(NSTimeInterval)timeout
 {
 	AXUIElementRef element=NULL;
 	AXUIElementCopyElementAtPosition (_systemWide, point.x, point.y, &element);

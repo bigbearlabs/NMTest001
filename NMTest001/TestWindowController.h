@@ -12,18 +12,26 @@
 @interface TestWindowController : NSWindowController {
     // internals
     NMUIElement *menuItem;
-
+    NSDate *lastMouseUpDate;
+    NSTimer *timer;
+    BOOL lastState;
+    BOOL timing;
+    
     // ui
     NSString *appDisplayName;
     NSString *menuItemTitle;
     NSString *foundMenuItemTitle;
     NSString *foundMenuItemState;
+    NSString *timerString;
 }
 
 @property (assign) NSString *appDisplayName;
 @property (assign) NSString *menuItemTitle;
 @property (assign) NSString *foundMenuItemTitle;
 @property (assign) NSString *foundMenuItemState;
+@property (assign) NSString *timerString;
 
 - (void)handleNewElement:(NMUIElement *)element;
+- (void)handleMouseUpInWindow;
+
 @end

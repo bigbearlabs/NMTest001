@@ -15,16 +15,16 @@
     NSTimer *timer;
     
     // ui
-    NSString *appDisplayName;
-    NSString *menuItemTitle;
-    NSString *foundMenuItemTitle;
-    NSString *foundMenuItemState;
+    NSString *__strong appDisplayName;
+    NSString *__strong menuItemTitle;
+    NSString *__strong foundMenuItemTitle;
+    NSString *__strong foundMenuItemState;
 }
 
-@property (assign) NSString *appDisplayName;
-@property (assign) NSString *menuItemTitle;
-@property (assign) NSString *foundMenuItemTitle;
-@property (assign) NSString *foundMenuItemState;
+@property (strong) NSString *appDisplayName;
+@property (strong) NSString *menuItemTitle;
+@property (strong) NSString *foundMenuItemTitle;
+@property (strong) NSString *foundMenuItemState;
 
 - (void)handleNewElement:(NMUIElement *)element;
 

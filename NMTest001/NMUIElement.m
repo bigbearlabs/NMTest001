@@ -32,7 +32,7 @@ static AXUIElementRef _systemWide = NULL;
 
 - (id)initWithElement:(AXUIElementRef)element
 {
-	[super init];
+	if (!(self = [super init])) return nil;
 	if(!element) return nil;
 	elementRef=element;
 	return self;
@@ -51,9 +51,9 @@ static AXUIElementRef _systemWide = NULL;
 
 - (NSString *)selectedText
 {
-	NSString *result;
-	AXUIElementCopyAttributeValue(elementRef, kAXSelectedTextAttribute, (CFTypeRef *)&result);
-	return result;
+	CFTypeRef result;
+	AXUIElementCopyAttributeValue(elementRef, kAXSelectedTextAttribute, &result);
+	return (__bridge NSString*)result;
 }
 
 #pragma mark Parent roles (including self)
@@ -90,44 +90,44 @@ static AXUIElementRef _systemWide = NULL;
 
 - (NSString *)role
 {
-	NSString *result;
-	AXUIElementCopyAttributeValue(elementRef, kAXRoleAttribute, (CFTypeRef *)&result);
-	return result;
+	CFTypeRef result;
+	AXUIElementCopyAttributeValue(elementRef, kAXRoleAttribute, &result);
+	return (__bridge NSString*) result;
 }
 
 - (NSString *)subRole
 {
-	NSString *result;
+	CFTypeRef result;
 	AXUIElementCopyAttributeValue(elementRef, kAXSubroleAttribute, (CFTypeRef *)&result);
-	return result;
+	return (__bridge NSString*) result;
 }
 
 - (NSString *)title
 {
-	NSString *result;
+	CFTypeRef result;
 	AXUIElementCopyAttributeValue(elementRef, kAXTitleAttribute, (CFTypeRef *)&result);
-	return result;	
+	return (__bridge NSString*) result;
 }
 
 - (NSString *)menuCmdCharacter
 {
-	NSString *result;
+	CFTypeRef result;
 	AXUIElementCopyAttributeValue(elementRef, kAXMenuItemCmdCharAttribute, (CFTypeRef *)&result);
-	return result;	
+	return (__bridge NSString*) result;
 }
 
 - (NSNumber *)menuCmdKeycode
 {
-	NSNumber *result;
+	CFTypeRef result;
 	AXUIElementCopyAttributeValue(elementRef, kAXMenuItemCmdVirtualKeyAttribute, (CFTypeRef *)&result);
-	return result;	
+	return (__bridge NSNumber*) result;
 }
 
 - (NSNumber *)menuCmdModifiers
 {
-	NSNumber *result;
+	CFTypeRef result;
 	AXUIElementCopyAttributeValue(elementRef, kAXMenuItemCmdModifiersAttribute, (CFTypeRef *)&result);
-	return result;	
+	return (__bridge NSNumber*) result;
 }
 
 #pragma mark Boolean Attributes
@@ -197,14 +197,14 @@ static AXUIElementRef _systemWide = NULL;
 {
     CFTypeRef result=nil;
 	AXUIElementCopyAttributeValue(elementRef, kAXInsertionPointLineNumberAttribute, (CFTypeRef *)&result);
-    return (NSNumber *)result;
+    return (__bridge NSNumber *)result;
 }
 
 - (NSNumber *)numberOfCharacters
 {
     CFTypeRef result=nil;
 	AXUIElementCopyAttributeValue(elementRef, kAXNumberOfCharactersAttribute, (CFTypeRef *)&result);
-    return (NSNumber *)result;
+    return (__bridge NSNumber *)result;
 }
 
 #pragma mark Relates Elements
@@ -243,9 +243,9 @@ static AXUIElementRef _systemWide = NULL;
 
 - (NSArray *)children
 {
-	NSArray *result;
-	AXUIElementCopyAttributeValue(elementRef, kAXChildrenAttribute, (CFTypeRef *)&result);
-	return result;
+	CFTypeRef result;
+	AXUIElementCopyAttributeValue(elementRef, kAXChildrenAttribute, &result);
+	return (__bridge NSArray*) result;
 }
 
 - (NMUIElement *)appElement
@@ -274,10 +274,10 @@ static AXUIElementRef _systemWide = NULL;
 -(NMUIElement *)childAtIndex:(NSUInteger)index
 {
 	NMUIElement *result=nil;
-	NSArray *itemChildren;
+	CFTypeRef itemChildren;
 	AXUIElementCopyAttributeValue(elementRef, kAXChildrenAttribute, (CFTypeRef *)&itemChildren);
-	if (itemChildren&&[itemChildren count]>index) {
-		result=[[NMUIElement alloc] initWithElement:(AXUIElementRef)[itemChildren objectAtIndex:index]];
+	if (itemChildren&&[(__bridge NSArray*)itemChildren count]>index) {
+		result=[[NMUIElement alloc] initWithElement:(AXUIElementRef)[(__bridge NSArray*)itemChildren objectAtIndex:index]];
 	}
 	return result;
 }
@@ -313,20 +313,20 @@ static AXUIElementRef _systemWide = NULL;
 - (NMUIElement *)attributeNamed:(NSString *)name
 {
 	AXUIElementRef result=NULL;
-	AXUIElementCopyAttributeValue(elementRef, (CFTypeRef)name, (CFTypeRef *)&result);
+	AXUIElementCopyAttributeValue(elementRef, (__bridge CFTypeRef)name, (CFTypeRef *)&result);
 	return [[NMUIElement alloc] initWithElement:result];
 }
 
 - (NSArray *)actionNames
 {
-	NSArray *result;
-	AXUIElementCopyActionNames(elementRef, (CFArrayRef*)&result);	
-	return result;
+	CFArrayRef result;
+	AXUIElementCopyActionNames(elementRef, &result);
+	return (__bridge NSArray*)result;
 }
 
 - (void)performAction:(NSString *)name
 {
-	AXUIElementPerformAction(elementRef, (CFStringRef)name);
+	AXUIElementPerformAction(elementRef, (__bridge CFStringRef)name);
 }
 
 - (NMUIElement *)topLevelMenuWithIndex:(NSUInteger)index

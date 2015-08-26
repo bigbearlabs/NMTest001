@@ -28,7 +28,7 @@
     [NSEvent addGlobalMonitorForEventsMatchingMask:NSLeftMouseDownMask|NSLeftMouseUpMask handler:^(NSEvent *event) {
         
         // get the UI Element at the mouse location
-		NSPoint point=NSPointFromCGPoint(CGEventGetLocation((CGEventRef)NSMakeCollectable(CGEventCreate(NULL))));
+		NSPoint point=NSPointFromCGPoint(CGEventGetLocation((CGEventRef)CFBridgingRetain(CFBridgingRelease(CGEventCreate(NULL)))));
         
         NMUIElement *const element=[NMUIElement elementAtLocation:point];        
         // only handle clicks on windows
